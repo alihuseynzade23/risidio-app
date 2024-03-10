@@ -25,14 +25,15 @@ const Img = ({
 }: ImgProps) => {
   return (
     <NextImage
-      className={className}
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      onClick={onClick}
-      {...restProps}
-    />
+    className={className}
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    onClick={onClick}
+    quality={80} // Adjust quality as needed
+    {...restProps}
+  />
   );
 };
 
