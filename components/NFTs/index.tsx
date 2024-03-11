@@ -1,16 +1,57 @@
 import Heading from "../Heading"
 import { Img } from "../Img"
+import NFTItem from "../NFTItem"
 
 
+const nfts = [
+  {
+    title: 'Night is coming',
+    image: '/images/sky-nft.png',
+    price: 0.12
+
+  },
+  {
+    title: 'With the stars',
+    image: '/images/img_rectangle_3.png',
+    price: 0.12
+  },
+  {
+    title: 'Summer',
+    image: '/images/palms-nft.png',
+    price: 0.12
+  },
+  {
+    title: 'Quiet',
+    image: '/images/blue-sky-nft.png',
+    price: 0.14
+  },
+  {
+    title: 'Travel',
+    image: '/images/travel-nft.png',
+    price: 0.12
+  },
+  {
+    title: 'The rain',
+    image: '/images/rain-nft.png',
+    price: 0.18
+  },
+
+]
 
 const NFTs = () => {
   return (
-    <>
+    <div className="mb-32">
         <Heading as="h3" className="mt-[133px] !font-extrabold">
               NFTs
             </Heading>
-            <div className="justify-center w-full mt-[53px] gap-10 grid-cols-3 md:grid-cols-2 md:gap-5 sm:grid-cols-1 grid">
-              <div className="flex flex-col items-center justify-start w-full p-4 bg-gray-50 shadow-sm rounded-[47px]">
+            <div className="justify-between w-full mt-[53px] gap-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+            {nfts.map((item, index) => (
+              <NFTItem {...item} key={index} />
+            ))}
+
+
+              {/* <div className="flex flex-col items-center justify-start w-full p-4 bg-gray-50 shadow-sm rounded-[47px]">
                 <div className="flex flex-col items-center justify-start w-full mb-[42px] gap-[45px]">
                   <div className="flex flex-row justify-center w-full">
                     <Img
@@ -26,8 +67,8 @@ const NFTs = () => {
                     </button>
                   </div>
                 </div>
-              </div>
-              <div className="flex flex-col items-center justify-start w-full p-4 bg-gray-50 shadow-sm rounded-[47px]">
+              </div> */}
+              {/* <div className="flex flex-col items-center justify-start w-full p-4 bg-gray-50 shadow-sm rounded-[47px]">
                 <div className="flex flex-col items-center justify-start w-full mb-[42px] gap-[43px]">
                   <div className="flex flex-row justify-center w-full">
                     <div className="h-[345px] w-full sm:w-full relative">
@@ -57,8 +98,8 @@ const NFTs = () => {
                     </button>
                   </div>
                 </div>
-              </div>
-              <div className="flex flex-col items-center justify-start w-full p-4 bg-gray-50 shadow-sm rounded-[47px]">
+              </div> */}
+              {/* <div className="flex flex-col items-center justify-start w-full p-4 bg-gray-50 shadow-sm rounded-[47px]">
                 <div className="flex flex-col items-center justify-start w-full mb-[42px] gap-11">
                   <div className="flex flex-row justify-center w-full">
                     <div className="h-[345px] w-full sm:w-full relative">
@@ -81,8 +122,8 @@ const NFTs = () => {
                     </button>
                   </div>
                 </div>
-              </div>
-              <div className="flex flex-col items-center justify-start w-full p-4 bg-gray-50 shadow-sm rounded-[47px]">
+              </div> */}
+              {/* <div className="flex flex-col items-center justify-start w-full p-4 bg-gray-50 shadow-sm rounded-[47px]">
                 <div className="flex flex-col items-center justify-start w-full mb-[42px] gap-11">
                   <div className="h-[345px] w-full relative">
                     <Img
@@ -103,8 +144,8 @@ const NFTs = () => {
                     </button>
                   </div>
                 </div>
-              </div>
-              <div className="flex flex-col items-center justify-start w-full p-4 bg-gray-50 shadow-sm rounded-[47px]">
+              </div> */}
+              {/* <div className="flex flex-col items-center justify-start w-full p-4 bg-gray-50 shadow-sm rounded-[47px]">
                 <div className="flex flex-col items-center justify-start w-full mb-[42px] gap-11">
                   <div className="h-[345px] w-full relative">
                     <Img
@@ -125,8 +166,8 @@ const NFTs = () => {
                     </button>
                   </div>
                 </div>
-              </div>
-              <div className="flex flex-col items-center justify-start w-full p-4 bg-gray-50 shadow-sm rounded-[47px]">
+              </div> */}
+              {/* <div className="flex flex-col items-center justify-start w-full p-4 bg-gray-50 shadow-sm rounded-[47px]">
                 <div className="flex flex-col items-center justify-start w-full mb-[42px] gap-[43px]">
                   <div className="flex flex-row justify-center w-full">
                     <div className="h-[345px] w-full sm:w-full relative">
@@ -149,9 +190,9 @@ const NFTs = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
-    </>
+    </div>
   )
 }
 

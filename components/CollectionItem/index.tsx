@@ -18,7 +18,7 @@ const CollectionItem = ({collectionImage, header, artistName, artistIcon}: Colle
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-          <div className="flex flex-col items-center justify-center py-4 px-6 bg-[#fff] shadow-xs rounded-[47px] w-full shadow-md">
+          <div className="flex flex-col items-center justify-center py-4 px-6 bg-[#fff] rounded-[47px] w-full shadow-md">
             <div className="h-[227px] w-full relative">
             <div className="w-full relative">
                 <Img

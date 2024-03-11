@@ -37,7 +37,7 @@ const Main = () => {
 
             <div className='md:w-[75%] max-w-md: w-full item-center flex justify-between my-12 gap-8'>
             <div className='w-[220px]'>
-                <Link className='w-full' href='/'>
+                <Link className='w-full' href='/connect-wallet'>
                     <button className="w-full py-4 text-base font-semibold rounded-[33px] text-[#fff] bg-[#23252B] ]">
                         Buy
                     </button>
