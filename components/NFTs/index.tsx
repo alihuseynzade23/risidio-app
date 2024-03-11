@@ -1,5 +1,4 @@
 import Heading from "../Heading"
-import { Img } from "../Img"
 import NFTItem from "../NFTItem"
 
 

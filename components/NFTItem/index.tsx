@@ -1,9 +1,13 @@
 'use client'
 import { Img } from "../Img"
 import Heading from "../Heading"
-import { useState } from "react"
+import { MouseEventHandler, useState } from "react"
 import Link from "next/link"
 import Text from "../Text"
+import { useAppDispatch } from "@/store"
+import { RootState } from "@/store"
+import { useSelector } from "react-redux"
+import { setNFT } from "@/features/nfts-slice"
 
 interface NFTItemProps {
     title: string,
@@ -14,6 +18,12 @@ interface NFTItemProps {
 const NFTItem = ({title, image, price}: NFTItemProps) => {
 
     const [isHovered, setIsHovered] = useState(false);
+    const dispatch = useAppDispatch()
+
+    const handleButtonClick: MouseEventHandler<HTMLButtonElement> = (event) => {
+      dispatch(setNFT(image));
+  };
+
 
   return (
     <div className="flex flex-col w-[85%] p-4 shadow-md rounded-[47px] mx-auto">
@@ -30,21 +40,22 @@ const NFTItem = ({title, image, price}: NFTItemProps) => {
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >
-                  <Link href="/connect-wallet">
+                  {/* <Link href="/"> */}
                     <button
+                      onClick={handleButtonClick}
                       className={`bg-[#FAFAFA] w-max h-[60px] px-12 left-0 bottom-0 right-0 top-0 m-auto font-semibold absolute rounded-[33px] transition-opacity duration-300 ${
                         isHovered ? "opacity-100" : "opacity-0"
                       }`}
                     >
                       Buy --&gt;
                     </button>
-                  </Link>
+                  {/* </Link> */}
                 </div>
             </div>
         </div>
         <div className="flex flex-row justify-between items-center w-[98%] md:w-full">
-            <Text className="font-[700] md:text-[1.20rem] max-w-md: text-[1.6rem]">{title}</Text>
-            <button className="px-8 font-medium bg-[#D4D3EB] rounded-[49px] py-3">
+            <Text className="font-semibold md:text-[1.20rem] max-w-md: text-[1.6rem]">{title}</Text>
+            <button className="px-7 font-medium bg-[#D4D3EB] rounded-[49px] py-3">
             {price} BTC
             </button>
         </div>
