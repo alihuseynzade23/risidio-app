@@ -42,7 +42,7 @@ const CollectionMain = () => {
 
     </div>
 
-    <Img src="/images/start-nft.png"
+    <Img src="/images/stars-nft.png"
          alt="image_one"
          className=" rounded-[52px] object-cover md:w-[40%] max-w-md: w-full  md:h-[40%] max-w-md: " />
 </div>
