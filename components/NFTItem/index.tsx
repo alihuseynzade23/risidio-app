@@ -1,12 +1,8 @@
 'use client'
 import { Img } from "../Img"
-import Heading from "../Heading"
 import { MouseEventHandler, useState } from "react"
-import Link from "next/link"
 import Text from "../Text"
 import { useAppDispatch } from "@/store"
-import { RootState } from "@/store"
-import { useSelector } from "react-redux"
 import { setNFT } from "@/features/nfts-slice"
 
 interface NFTItemProps {
@@ -40,7 +36,6 @@ const NFTItem = ({title, image, price}: NFTItemProps) => {
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >
-                  {/* <Link href="/"> */}
                     <button
                       onClick={handleButtonClick}
                       className={`bg-[#FAFAFA] w-max h-[60px] px-12 left-0 bottom-0 right-0 top-0 m-auto font-semibold absolute rounded-[33px] transition-opacity duration-300 ${
@@ -49,7 +44,6 @@ const NFTItem = ({title, image, price}: NFTItemProps) => {
                     >
                       Buy --&gt;
                     </button>
-                  {/* </Link> */}
                 </div>
             </div>
         </div>

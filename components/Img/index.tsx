@@ -31,7 +31,6 @@ const Img = ({
     width={width}
     height={height}
     onClick={onClick}
-    quality={80} // Adjust quality as needed
     {...restProps}
   />
   );

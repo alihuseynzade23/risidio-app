@@ -2,7 +2,6 @@
 import Link from "next/link"
 import { Img } from "../Img"
 import { useState } from "react"
-import Text from "../Text"
 import { useSelector } from "react-redux"
 import { RootState } from "@/store"
 
@@ -20,11 +19,11 @@ const Header = () => {
       <Link href='/'>
         <Img className="h-10 sm:w-[240px] max-w-sm: w-[175px]" alt='marketplace' src='/images/marketplace.png' />
       </Link>
-        {/* <Link href='/connect-wallet'>
+        <Link href='/connect-wallet'>
           <button className="border-gray-900 border font-semibold border-solid text-[#23252B] py-4 px-8 rounded-[87px]">Connect Wallet</button>
-        </Link> */}
+        </Link>
         
-        {account ? 
+        {/* {account ? 
         ( 
         <div className={`pt-[16px] pb-[100px] px-[24px] fixed right-0 z-50 top-[10px] bg-[#fff] sm:w-[400px] max-w-sm: w-[250px] popup rounded-[30px] border-2 border-[#02071D] popup ${account ? 'open': 'closed'}`}>
           <div className="cursor-pointer" onClick={() => setAccount(false)}>
@@ -75,7 +74,7 @@ const Header = () => {
         <button onClick={() => setAccount(true)} className="border-gray-900 border font-semibold border-solid text-[#23252B] py-4 px-8 rounded-[87px]">Account</button>
       )
       }
-       
+        */}
     </div>
 )
 }

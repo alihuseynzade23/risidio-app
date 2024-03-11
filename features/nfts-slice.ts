@@ -7,7 +7,7 @@ interface NFT {
 
 const nftSlice = createSlice({
   name: '@@nfts',
-  initialState: [] as NFT[], // Specify the type explicitly as NFT[]
+  initialState: [] as NFT[],
   reducers: {
     setNFT: (state, action: PayloadAction<string>) => {
         state.push({ image: action.payload});

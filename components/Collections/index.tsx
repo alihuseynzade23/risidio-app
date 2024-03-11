@@ -1,7 +1,5 @@
 import CollectionItem from "../CollectionItem"
 import Heading from "../Heading"
-import { Img } from "../Img"
-import Text from "../Text"
 
 const collectionData = [
   {

@@ -22,11 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <ReduxProvider>   
         <body className={inter.className}>
-        {/* <div className="w-[90%] mx-auto my-6 font-inter"> */}
-          {/* <Header /> */}
             {children}
-        {/* </div> */}
-        {/* <Footer /> */}
           </body>
     </ReduxProvider>
     </html>
