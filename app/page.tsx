@@ -1,5 +1,5 @@
 import { Img } from "@/components/Img";
-import HeaderMain from '@/components/HeaderMain'
+import HeaderMain from '@/components/HomeMain'
 import Collections from "@/components/Collections";
 
 export default function Home() {
